@@ -1,0 +1,34 @@
+{
+    "database": {
+        "prod": {
+            "db-user": "${VAUB_DB_USER}",
+            "db-password": "${VAUB_DB_PASS}",
+            "db-name": "vaubernier_fidelite",
+            "db-adress": "localhost:5432"
+        },
+        "test": {
+            "db-user": "camemberge_test",
+            "db-password": "${VAUB_DB_PASS}",
+            "db-name": "vaubernier_fidelite_test",
+            "db-adress": "localhost:5432"
+        }
+    },
+    "jwt": {
+        "secret": "${VAUB_JWT_SECRET}"
+    },
+    "smtp": {
+        "password": "${VAUB_SMTP_PASS}",
+        "user": "${VAUB_SMTP_USER}",
+        "host": "srv759.mysmtp.fr",
+        "port": "587",
+        "postmaster": "noreply@bonsmayennais.fr"
+    },
+    "server": {
+        "back-url": "${VAUB_BACK_URL}",
+        "corses": ["http://localhost:5173", "http://localhost:3000", "http://192.168.0.199:3000",  "http://bm-fidelite.ad.bons-mayennais.fr.ad.bons-mayennais.fr:3000"]
+    },
+    "encryption": {
+        "client-encryption-key": "${VAUB_ENCRYPTION_KEY}",
+        "salt": "${VAUB_ENCRYPTION_SALT}"
+    }
+}
